@@ -21,6 +21,7 @@ const HomeContainer = () => {
                   <Input
                     className="block border-neutral-400 border"
                     name={'nama'}
+                    value={formMik.values.nama}
                   />
                 </div>
                 {/* Input Umur */}
@@ -29,6 +30,7 @@ const HomeContainer = () => {
                   <Input
                     className="block border-neutral-400 border"
                     name={'umur'}
+                    value={formMik.values.umur}
                   />
                 </div>
                 {/* Input Hobi */}
@@ -37,6 +39,7 @@ const HomeContainer = () => {
                   <Input
                     className="block border-neutral-400 border"
                     name={'hobi'}
+                    value={formMik.values.hobi}
                   />
                 </div>
                 {/* Button Submit */}
@@ -72,3 +75,4 @@ export default HomeContainer
 // 17. Connecting input with initialValues props with add name props to input component with value nama, umur, hobi(like  name={'nama'}, name={'umur'}, name={'hobi'})
 // 18. cr8 formMik with useFormik hook from formik
 // 19. pass in initialValues props to useFormik hook with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
+// 20. add value props to input component to get value after input text with value formMik.values.nama, formMik.values.umur, formMik.values.hobi
