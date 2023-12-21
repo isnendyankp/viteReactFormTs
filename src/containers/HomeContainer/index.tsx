@@ -22,6 +22,7 @@ const HomeContainer = () => {
                     className="block border-neutral-400 border"
                     name={'nama'}
                     value={formMik.values.nama}
+                    onChange={formMik.handleChange('nama')}
                   />
                 </div>
                 {/* Input Umur */}
@@ -31,6 +32,7 @@ const HomeContainer = () => {
                     className="block border-neutral-400 border"
                     name={'umur'}
                     value={formMik.values.umur}
+                    onChange={formMik.handleChange('umur')}
                   />
                 </div>
                 {/* Input Hobi */}
@@ -40,6 +42,7 @@ const HomeContainer = () => {
                     className="block border-neutral-400 border"
                     name={'hobi'}
                     value={formMik.values.hobi}
+                    onChange={formMik.handleChange('hobi')}
                   />
                 </div>
                 {/* Button Submit */}
@@ -76,3 +79,4 @@ export default HomeContainer
 // 18. cr8 formMik with useFormik hook from formik
 // 19. pass in initialValues props to useFormik hook with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
 // 20. add value props to input component to get value after input text with value formMik.values.nama, formMik.values.umur, formMik.values.hobi
+// 21. add onChange props to input component with value formMik.handleChange('nama'), formMik.handleChange('umur'), formMik.handleChange('hobi')
