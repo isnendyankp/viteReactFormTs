@@ -18,17 +18,26 @@ const HomeContainer = () => {
                 {/* Input Nama */}
                 <div>
                   <Text>{'Nama'}</Text>
-                  <Input className="block border-neutral-400 border" />
+                  <Input
+                    className="block border-neutral-400 border"
+                    name={'nama'}
+                  />
                 </div>
                 {/* Input Umur */}
                 <div>
                   <Text>{'Umur'}</Text>
-                  <Input className="block border-neutral-400 border" />
+                  <Input
+                    className="block border-neutral-400 border"
+                    name={'umur'}
+                  />
                 </div>
                 {/* Input Hobi */}
                 <div>
                   <Text>{'Hobi'}</Text>
-                  <Input className="block border-neutral-400 border" />
+                  <Input
+                    className="block border-neutral-400 border"
+                    name={'hobi'}
+                  />
                 </div>
                 {/* Button Submit */}
                 <Button
@@ -61,3 +70,4 @@ export default HomeContainer
 // 14. warp all input, text, button element with Form component inside Formik component
 // 15. fix import from formik with add Formik to Formik component
 // 16. Add initialValues props to Formik component with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
+// 17. Connecting input with initialValues props with add name props to input component with value nama, umur, hobi(like  name={'nama'}, name={'umur'}, name={'hobi'})
