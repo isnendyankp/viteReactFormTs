@@ -4,33 +4,41 @@ import { Formik, Form } from "formik";
 const HomeContainer = () => {
 
         return (
-            <>
-                <Formik>
-                    <Form>
-                        {/* Input Nama */}
-                        <div>
-                            <Text>{'Nama'}</Text>
-                            <Input className="block border-neutral-400 border" />
-                        </div>
-                        {/* Input Umur */}
-                        <div>
-                            <Text>{'Umur'}</Text>
-                            <Input className="block border-neutral-400 border" />
-                        </div>
-                        {/* Input Hobi */}
-                        <div>
-                            <Text>{'Hobi'}</Text>
-                            <Input className="block border-neutral-400 border" />
-                        </div>
-                        {/* Button Submit */}
-                        <Button
-                            label={'Submit'}
-                            type={'submit'}
-                            className={'bg-green-500'}
-                        />
-                    </Form>
-                </Formik>
-            </>
+          <>
+            <Formik
+              // Definition initiaLValues props is default value like a default useState value
+              initialValues={{
+                nama: '',
+                umur: '',
+                hobi: '',
+              }}
+              onSubmit={(values) => console.log(values)}
+            >
+              <Form>
+                {/* Input Nama */}
+                <div>
+                  <Text>{'Nama'}</Text>
+                  <Input className="block border-neutral-400 border" />
+                </div>
+                {/* Input Umur */}
+                <div>
+                  <Text>{'Umur'}</Text>
+                  <Input className="block border-neutral-400 border" />
+                </div>
+                {/* Input Hobi */}
+                <div>
+                  <Text>{'Hobi'}</Text>
+                  <Input className="block border-neutral-400 border" />
+                </div>
+                {/* Button Submit */}
+                <Button
+                  label={'Submit'}
+                  type={'submit'}
+                  className={'bg-green-500'}
+                />
+              </Form>
+            </Formik>
+          </>
         );
 }
 
@@ -52,3 +60,4 @@ export default HomeContainer
 // 13. import Form from formik
 // 14. warp all input, text, button element with Form component inside Formik component
 // 15. fix import from formik with add Formik to Formik component
+// 16. Add initialValues props to Formik component with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
