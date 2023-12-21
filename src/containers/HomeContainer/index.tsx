@@ -1,5 +1,6 @@
 import { Input, Text, Button } from "../../components"
 import { Formik, Form, useFormik } from "formik";
+import * as Yup from 'yup';
 
 const HomeContainer = () => {
 
@@ -82,3 +83,4 @@ export default HomeContainer
 // 21. add onChange props to input component with value formMik.handleChange('nama'), formMik.handleChange('umur'), formMik.handleChange('hobi') to add return value from input text
 // 22. add values onSubmit @formMik>onSubmit props
 // 23. add handleSubmit props to form element with onSubmit={formMik.handleSubmit}
+// 24. import yup validation
