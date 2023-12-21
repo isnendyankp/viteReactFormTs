@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react";
 
 
 interface Props extends HTMLAttributes<HTMLParagraphElement> {
@@ -22,3 +23,5 @@ export default Text;
 // 4. Render children props/parameter to p element
 // 5. Add extends HTMLAttributes<HTMLParagraphElement> to Props type
 // 6. Add props with type Props to Text component and spread it to p element
+// 7. Add ...props to p element
+// 8. import HTMLAttributes from react
