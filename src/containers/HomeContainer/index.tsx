@@ -16,7 +16,7 @@ const HomeContainer = () => {
                 <Text>{'Hobi'}</Text>
                 <Input className="block border-neutral-400 border" />
             </div>
-            <Button label={'Submit'} />
+            <Button label={'Submit'} type={'submit'}/>
         </>
     );
 }
@@ -34,3 +34,4 @@ export default HomeContainer
 // 8. Add new text & input element to div element and wrap it with react fragment for umur & hobi
 // 9. import Button component
 // 10. render with pass in Button component with label props & value Submit
+// 11. Add type submit because @Button component interface has extended ButtonHTMLAttributes<HTMLButtonElement> from react
