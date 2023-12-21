@@ -1,19 +1,14 @@
 import { Input, Text, Button } from "../../components"
-import { Formik, Form } from "formik";
+import { Formik, Form, useFormik } from "formik";
 
 const HomeContainer = () => {
 
+    const formMik = useFormik({
+       
+    });
+
         return (
           <>
-            <Formik
-              // Definition initiaLValues props is default value like a default useState value
-              initialValues={{
-                nama: '',
-                umur: '',
-                hobi: '',
-              }}
-              onSubmit={(values) => console.log(values)}
-            >
               <Form>
                 {/* Input Nama */}
                 <div>
@@ -46,7 +41,6 @@ const HomeContainer = () => {
                   className={'bg-green-500'}
                 />
               </Form>
-            </Formik>
           </>
         );
 }
@@ -71,3 +65,4 @@ export default HomeContainer
 // 15. fix import from formik with add Formik to Formik component
 // 16. Add initialValues props to Formik component with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
 // 17. Connecting input with initialValues props with add name props to input component with value nama, umur, hobi(like  name={'nama'}, name={'umur'}, name={'hobi'})
+// 18. cr8 formMik with useFormik hook from formik
