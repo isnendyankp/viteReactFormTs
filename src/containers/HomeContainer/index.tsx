@@ -12,50 +12,52 @@ const HomeContainer = () => {
       },
       onSubmit: (values) => console.log(values),
       validationSchema: yup.object({
-        nama: yup.string().required()
+        nama: yup.string().required('Nama tidak boleh kosong')
       }),
     });
 
         return (
           <>
-              <form onSubmit={formMik.handleSubmit}>
-                {/* Input Nama */}
-                <div>
-                  <Text>{'Nama'}</Text>
-                  <Input
-                    className="block border-neutral-400 border"
-                    name={'nama'}
-                    value={formMik.values.nama}
-                    onChange={formMik.handleChange('nama')}
-                  />
-                </div>
-                {/* Input Umur */}
-                <div>
-                  <Text>{'Umur'}</Text>
-                  <Input
-                    className="block border-neutral-400 border"
-                    name={'umur'}
-                    value={formMik.values.umur}
-                    onChange={formMik.handleChange('umur')}
-                  />
-                </div>
-                {/* Input Hobi */}
-                <div>
-                  <Text>{'Hobi'}</Text>
-                  <Input
-                    className="block border-neutral-400 border"
-                    name={'hobi'}
-                    value={formMik.values.hobi}
-                    onChange={formMik.handleChange('hobi')}
-                  />
-                </div>
-                {/* Button Submit */}
-                <Button
-                  label={'Submit'}
-                  type={'submit'}
-                  className={'bg-green-500'}
+            <form onSubmit={formMik.handleSubmit}>
+              {/* Input Nama */}
+              <div>
+                <Text>{'Nama'}</Text>
+                <Input
+                  className="block border-neutral-400 border"
+                  name={'nama'}
+                  value={formMik.values.nama}
+                  onChange={formMik.handleChange('nama')}
                 />
-              </form>
+                {/* add error validation text with yup for input nama */}
+                {formMik.errors.nama && <Text>{formMik.errors.nama}</Text>}
+              </div>
+              {/* Input Umur */}
+              <div>
+                <Text>{'Umur'}</Text>
+                <Input
+                  className="block border-neutral-400 border"
+                  name={'umur'}
+                  value={formMik.values.umur}
+                  onChange={formMik.handleChange('umur')}
+                />
+              </div>
+              {/* Input Hobi */}
+              <div>
+                <Text>{'Hobi'}</Text>
+                <Input
+                  className="block border-neutral-400 border"
+                  name={'hobi'}
+                  value={formMik.values.hobi}
+                  onChange={formMik.handleChange('hobi')}
+                />
+              </div>
+              {/* Button Submit */}
+              <Button
+                label={'Submit'}
+                type={'submit'}
+                className={'bg-green-500'}
+              />
+            </form>
           </>
         );
 }
@@ -88,3 +90,5 @@ export default HomeContainer
 // 23. add handleSubmit props to form element with onSubmit={formMik.handleSubmit}
 // 24. import yup validation
 // 25. add validationSchema props to useFormik hook with yup.object({nama: yup.string().required()})
+// 26. add error validation text with yup for input nama
+// 27. add change text error validation at nama input @validationSchema>nama
