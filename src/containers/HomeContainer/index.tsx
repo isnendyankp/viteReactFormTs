@@ -1,37 +1,37 @@
 import { Input, Text, Button } from "../../components"
-import { Form } from "formik";
+import { Formik, Form } from "formik";
 
 const HomeContainer = () => {
 
-    return (
-      <>
-        <Formik>
-          <Form>
-            {/* Input Nama */}
-            <div>
-              <Text>{'Nama'}</Text>
-              <Input className="block border-neutral-400 border" />
-            </div>
-            {/* Input Umur */}
-            <div>
-              <Text>{'Umur'}</Text>
-              <Input className="block border-neutral-400 border" />
-            </div>
-            {/* Input Hobi */}
-            <div>
-              <Text>{'Hobi'}</Text>
-              <Input className="block border-neutral-400 border" />
-            </div>
-            {/* Button Submit */}
-            <Button
-              label={'Submit'}
-              type={'submit'}
-              className={'bg-green-500'}
-            />
-          </Form>
-        </Formik>
-      </>
-    );
+        return (
+            <>
+                <Formik>
+                    <Form>
+                        {/* Input Nama */}
+                        <div>
+                            <Text>{'Nama'}</Text>
+                            <Input className="block border-neutral-400 border" />
+                        </div>
+                        {/* Input Umur */}
+                        <div>
+                            <Text>{'Umur'}</Text>
+                            <Input className="block border-neutral-400 border" />
+                        </div>
+                        {/* Input Hobi */}
+                        <div>
+                            <Text>{'Hobi'}</Text>
+                            <Input className="block border-neutral-400 border" />
+                        </div>
+                        {/* Button Submit */}
+                        <Button
+                            label={'Submit'}
+                            type={'submit'}
+                            className={'bg-green-500'}
+                        />
+                    </Form>
+                </Formik>
+            </>
+        );
 }
 
 export default HomeContainer
@@ -51,3 +51,4 @@ export default HomeContainer
 // 12. Add tailwind bg-green-500 to button element with className props
 // 13. import Form from formik
 // 14. warp all input, text, button element with Form component inside Formik component
+// 15. fix import from formik with add Formik to Formik component
