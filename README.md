@@ -71,6 +71,10 @@ https://formik.org/docs/overview
 
 npm install formik --save
 
+## Install Yup
+
+npm i yup
+
 ##  component folder
 
 1. create new components folder in src folder
