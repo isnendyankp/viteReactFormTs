@@ -12,7 +12,9 @@ const HomeContainer = () => {
       },
       onSubmit: (values) => console.log(values),
       validationSchema: yup.object({
-        nama: yup.string().required('Nama tidak boleh kosong')
+        nama: yup.string().required('Nama tidak boleh kosong'),
+        umur: yup.string().required('Umur jangan lupa diisi ya'),
+        hobi: yup.string().required('Hobi nya apa nih?'),
       }),
     });
 
@@ -92,3 +94,4 @@ export default HomeContainer
 // 25. add validationSchema props to useFormik hook with yup.object({nama: yup.string().required()})
 // 26. add error validation text with yup for input nama
 // 27. add change text error validation at nama input @validationSchema>nama
+// 28. add validationSchema for umur & hobi including error validation text
