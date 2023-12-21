@@ -4,6 +4,12 @@ import * as yup from 'yup';
 
 const HomeContainer = () => {
 
+    interface FormProps {
+        nama: string;
+        umur: string;
+        hobi: string;
+    }
+
     const formMik = useFormik({
       initialValues: {
         nama: '',
@@ -14,7 +20,7 @@ const HomeContainer = () => {
       validationSchema: yup.object({
         nama: yup.string().required('Nama tidak boleh kosong'),
         umur: yup.string().required('Umur jangan lupa diisi ya'),
-        hobi: yup.string().required('Hobi nya apa nih?'),
+        hobi: yup.string().required('Hobi nya apa nih?')
       }),
     });
 
@@ -42,6 +48,8 @@ const HomeContainer = () => {
                   value={formMik.values.umur}
                   onChange={formMik.handleChange('umur')}
                 />
+                {/* add error validation text with yup for input umur */}
+                {formMik.errors.umur && <Text>{formMik.errors.umur}</Text>}
               </div>
               {/* Input Hobi */}
               <div>
@@ -52,6 +60,8 @@ const HomeContainer = () => {
                   value={formMik.values.hobi}
                   onChange={formMik.handleChange('hobi')}
                 />
+                {/* add error validation text with yup for input hobi */}
+                {formMik.errors.hobi && <Text>{formMik.errors.hobi}</Text>}
               </div>
               {/* Button Submit */}
               <Button
@@ -95,3 +105,4 @@ export default HomeContainer
 // 26. add error validation text with yup for input nama
 // 27. add change text error validation at nama input @validationSchema>nama
 // 28. add validationSchema for umur & hobi including error validation text
+// 29. cr8 interface FormProps with nama, umur, hobi props with type string
