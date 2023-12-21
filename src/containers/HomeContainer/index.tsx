@@ -4,7 +4,7 @@ const HomeContainer = () => {
 
     return (
         <div>
-            <Text>Home Container</Text>
+            <Text>{'Nama'}</Text>
             <Input className="block border-neutral-400 border" />
         </div>
     )
@@ -19,3 +19,4 @@ export default HomeContainer
 // 4. Add className props to input component with value display block and border neutral 400
 // 5. Add value border same as border-width: 1px from tailwind
 // 6. import Text component and render it with children props Home Container
+// 7. pass in children props to Text component with value Nama
