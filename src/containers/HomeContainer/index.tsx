@@ -16,7 +16,7 @@ const HomeContainer = () => {
         umur: '',
         hobi: '',
       },
-      onSubmit: (values) => console.log(values),
+      onSubmit: (values: FormProps) => console.log(values),
       validationSchema: yup.object({
         nama: yup.string().required('Nama tidak boleh kosong'),
         umur: yup.string().required('Umur jangan lupa diisi ya'),
@@ -106,3 +106,4 @@ export default HomeContainer
 // 27. add change text error validation at nama input @validationSchema>nama
 // 28. add validationSchema for umur & hobi including error validation text
 // 29. cr8 interface FormProps with nama, umur, hobi props with type string
+// 30. add FormProps type to onSubmit props with type FormProps
