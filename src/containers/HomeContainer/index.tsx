@@ -14,7 +14,7 @@ const HomeContainer = () => {
 
         return (
           <>
-              <Form>
+              <form onSubmit={formMik.handleSubmit}>
                 {/* Input Nama */}
                 <div>
                   <Text>{'Nama'}</Text>
@@ -51,7 +51,7 @@ const HomeContainer = () => {
                   type={'submit'}
                   className={'bg-green-500'}
                 />
-              </Form>
+              </form>
           </>
         );
 }
@@ -80,4 +80,5 @@ export default HomeContainer
 // 19. pass in initialValues props to useFormik hook with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
 // 20. add value props to input component to get value after input text with value formMik.values.nama, formMik.values.umur, formMik.values.hobi
 // 21. add onChange props to input component with value formMik.handleChange('nama'), formMik.handleChange('umur'), formMik.handleChange('hobi') to add return value from input text
-// 22. add values @formMik>onSubmit props
+// 22. add values onSubmit @formMik>onSubmit props
+// 23. add handleSubmit props to form element with onSubmit={formMik.handleSubmit}
