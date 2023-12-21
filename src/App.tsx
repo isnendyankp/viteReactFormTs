@@ -6,7 +6,8 @@ function App() {
 
   return (
     <>
-      <form action="">
+      {/* Add onSubmit untuk cara baca all input text di dalam form */}
+      <form onSubmit={() => console.log('asd')}>
         <input type="text" onChange={() => console.log('asd')} />
         <input type="text" onChange={() => console.log('asd')} />
         <input type="text" onChange={() => console.log('asd')} />
