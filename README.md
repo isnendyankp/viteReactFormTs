@@ -62,3 +62,11 @@ Open file `src/styles/index.css` add configure Tailwind CSS.
 ## rerun project:
 
 Run your build process with npm run dev.
+
+# Formik
+
+https://formik.org/docs/overview
+
+## Install Formik
+
+npm install formik --save
