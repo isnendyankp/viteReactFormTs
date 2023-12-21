@@ -70,3 +70,9 @@ https://formik.org/docs/overview
 ## Install Formik
 
 npm install formik --save
+
+##  component folder
+
+1. create new components folder in src folder
+2. create new input folder in components folder
+3. create new index.tsx file in input folder
