@@ -5,10 +5,10 @@ interface Props extends HTMLAttributes<HTMLParagraphElement> {
 }
 
 
-const Text = ({ children } : Props) => {
+const Text = ({ children, ...props } : Props) => {
 
     return (
-        <p>{children}</p>
+        <p {...props}>{children}</p>
     )
 }
 
@@ -21,3 +21,4 @@ export default Text;
 // 3. Add children props/parameter with type Props to Text component
 // 4. Render children props/parameter to p element
 // 5. Add extends HTMLAttributes<HTMLParagraphElement> to Props type
+// 6. Add props with type Props to Text component and spread it to p element
