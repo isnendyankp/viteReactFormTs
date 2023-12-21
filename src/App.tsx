@@ -6,12 +6,14 @@ function App() {
 
   return (
     <>
-      <input type="text" onChange={() => console.log('asd')} />
-      <input type="text" onChange={() => console.log('asd')} />
-      <input type="text" onChange={() => console.log('asd')} />
-      <input type="text" onChange={() => console.log('asd')} />
-      <input type="text" onChange={() => console.log('asd')} />
-      <button type='submit'>Submit</button>
+      <form action="">
+        <input type="text" onChange={() => console.log('asd')} />
+        <input type="text" onChange={() => console.log('asd')} />
+        <input type="text" onChange={() => console.log('asd')} />
+        <input type="text" onChange={() => console.log('asd')} />
+        <input type="text" onChange={() => console.log('asd')} />
+        <button type="submit">Submit</button>
+      </form>
     </>
   );
 }
