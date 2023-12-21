@@ -1,5 +1,6 @@
 
 import './App.css'
+import { HomeContainer } from './containers';
 
 function App() {
   
@@ -12,6 +13,12 @@ function App() {
 }
 
 export default App
+
+// Progress:
+// 1. cr8 App component
+// 2. import HomeContainer component
+
+
 
 // Cr8 simple form with add onSubmit to controlling input text & button submit 
 /* 
