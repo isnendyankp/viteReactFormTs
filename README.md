@@ -58,3 +58,7 @@ Open file `src/styles/index.css` add configure Tailwind CSS.
     @tailwind utilities;
 
     /* Custom styles go here */
+
+## rerun project:
+
+Run your build process with npm run dev.
