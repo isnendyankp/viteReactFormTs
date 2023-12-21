@@ -1,7 +1,7 @@
 
 const Input = () => {
   return (
-    <input />
+    <input type="text"/>
   )
 }
 
