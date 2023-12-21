@@ -8,7 +8,7 @@ interface Props {
 const Text = ({ children } : Props) => {
 
     return (
-        <p></p>
+        <p>{children}</p>
     )
 }
 
@@ -19,3 +19,4 @@ export default Text;
 // 1. cr8 Text component
 // 2. Cr8 type Props with children props with type string
 // 3. Add children props/parameter with type Props to Text component
+// 4. Render children props/parameter to p element
