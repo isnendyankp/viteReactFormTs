@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      
+      <HomeContainer
     </div>
   );
 }
@@ -17,6 +17,7 @@ export default App
 // Progress:
 // 1. cr8 App component
 // 2. import HomeContainer component
+// 3. render with pass in HomeContainer component
 
 
 
