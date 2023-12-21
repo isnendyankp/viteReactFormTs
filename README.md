@@ -46,3 +46,15 @@ Open file `tailwind.config.js` & add plugin Tailwind CSS.
         },
         plugins: [],
         }
+
+## Add the Tailwind directives to your CSS
+
+Open file `src/styles/index.css` add configure Tailwind CSS.
+
+    /* src/styles/index.css */
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Custom styles go here */
