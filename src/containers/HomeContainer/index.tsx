@@ -16,7 +16,7 @@ const HomeContainer = () => {
                 <Text>{'Hobi'}</Text>
                 <Input className="block border-neutral-400 border" />
             </div>
-            <Button label={'Submit'} type={'submit'}/>
+            <Button label={'Submit'} type={'submit'} className={'bg-green-500'}/>
         </>
     );
 }
@@ -35,3 +35,4 @@ export default HomeContainer
 // 9. import Button component
 // 10. render with pass in Button component with label props & value Submit
 // 11. Add type submit because @Button component interface has extended ButtonHTMLAttributes<HTMLButtonElement> from react
+// 12. Add tailwind bg-green-500 to button element with className props
