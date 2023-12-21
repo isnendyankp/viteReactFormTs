@@ -1,22 +1,22 @@
-import { Input, Text } from "../../components"
+import { Input, Text, Button } from "../../components"
 
 const HomeContainer = () => {
 
     return (
-      <>
-        <div>
-          <Text>{'Nama'}</Text>
-          <Input className="block border-neutral-400 border" />
-        </div>
-        <div>
-          <Text>{'Umur'}</Text>
-          <Input className="block border-neutral-400 border" />
-        </div>
-        <div>
-          <Text>{'Hobi'}</Text>
-          <Input className="block border-neutral-400 border" />
-        </div>
-      </>
+        <>
+            <div>
+                <Text>{'Nama'}</Text>
+                <Input className="block border-neutral-400 border" />
+            </div>
+            <div>
+                <Text>{'Umur'}</Text>
+                <Input className="block border-neutral-400 border" />
+            </div>
+            <div>
+                <Text>{'Hobi'}</Text>
+                <Input className="block border-neutral-400 border" />
+            </div>
+        </>
     );
 }
 
@@ -31,3 +31,4 @@ export default HomeContainer
 // 6. import Text component and render it with children props Home Container
 // 7. pass in children props to Text component with value Nama
 // 8. Add new text & input element to div element and wrap it with react fragment for umur & hobi
+// 9. import Button component
