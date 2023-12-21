@@ -4,21 +4,33 @@ import { Form } from "formik";
 const HomeContainer = () => {
 
     return (
-        <>
+      <>
+        <Formik>
+          <Form>
+            {/* Input Nama */}
             <div>
-                <Text>{'Nama'}</Text>
-                <Input className="block border-neutral-400 border" />
+              <Text>{'Nama'}</Text>
+              <Input className="block border-neutral-400 border" />
             </div>
+            {/* Input Umur */}
             <div>
-                <Text>{'Umur'}</Text>
-                <Input className="block border-neutral-400 border" />
+              <Text>{'Umur'}</Text>
+              <Input className="block border-neutral-400 border" />
             </div>
+            {/* Input Hobi */}
             <div>
-                <Text>{'Hobi'}</Text>
-                <Input className="block border-neutral-400 border" />
+              <Text>{'Hobi'}</Text>
+              <Input className="block border-neutral-400 border" />
             </div>
-            <Button label={'Submit'} type={'submit'} className={'bg-green-500'}/>
-        </>
+            {/* Button Submit */}
+            <Button
+              label={'Submit'}
+              type={'submit'}
+              className={'bg-green-500'}
+            />
+          </Form>
+        </Formik>
+      </>
     );
 }
 
@@ -38,3 +50,4 @@ export default HomeContainer
 // 11. Add type submit because @Button component interface has extended ButtonHTMLAttributes<HTMLButtonElement> from react
 // 12. Add tailwind bg-green-500 to button element with className props
 // 13. import Form from formik
+// 14. warp all input, text, button element with Form component inside Formik component
