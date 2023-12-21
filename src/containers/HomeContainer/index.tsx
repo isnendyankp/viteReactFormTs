@@ -1,6 +1,6 @@
 import { Input, Text, Button } from "../../components"
 import { useFormik } from "formik";
-import * as Yup from 'yup';
+import * as yup from 'yup';
 
 const HomeContainer = () => {
 
@@ -11,6 +11,9 @@ const HomeContainer = () => {
         hobi: '',
       },
       onSubmit: (values) => console.log(values),
+      validationSchema: yup.object({
+        nama: yup.string().required()
+      }),
     });
 
         return (
@@ -84,3 +87,4 @@ export default HomeContainer
 // 22. add values onSubmit @formMik>onSubmit props
 // 23. add handleSubmit props to form element with onSubmit={formMik.handleSubmit}
 // 24. import yup validation
+// 25. add validationSchema props to useFormik hook with yup.object({nama: yup.string().required()})
