@@ -3,11 +3,21 @@ import { Input, Text } from "../../components"
 const HomeContainer = () => {
 
     return (
+      <>
         <div>
-            <Text>{'Nama'}</Text>
-            <Input className="block border-neutral-400 border" />
+          <Text>{'Nama'}</Text>
+          <Input className="block border-neutral-400 border" />
         </div>
-    )
+        <div>
+          <Text>{'Umur'}</Text>
+          <Input className="block border-neutral-400 border" />
+        </div>
+        <div>
+          <Text>{'Hobi'}</Text>
+          <Input className="block border-neutral-400 border" />
+        </div>
+      </>
+    );
 }
 
 export default HomeContainer
@@ -20,3 +30,4 @@ export default HomeContainer
 // 5. Add value border same as border-width: 1px from tailwind
 // 6. import Text component and render it with children props Home Container
 // 7. pass in children props to Text component with value Nama
+// 8. Add new text & input element to div element and wrap it with react fragment for umur & hobi
