@@ -4,7 +4,12 @@ import { Formik, Form, useFormik } from "formik";
 const HomeContainer = () => {
 
     const formMik = useFormik({
-       
+      initialValues: {
+        nama: '',
+        umur: '',
+        hobi: '',
+      },
+      onSubmit: () => console.log(),
     });
 
         return (
@@ -66,3 +71,4 @@ export default HomeContainer
 // 16. Add initialValues props to Formik component with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
 // 17. Connecting input with initialValues props with add name props to input component with value nama, umur, hobi(like  name={'nama'}, name={'umur'}, name={'hobi'})
 // 18. cr8 formMik with useFormik hook from formik
+// 19. pass in initialValues props to useFormik hook with value nama, umur, hobi & empty string value & onSubmit props with value console.log(values)
