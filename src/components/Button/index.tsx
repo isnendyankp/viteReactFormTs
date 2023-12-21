@@ -1,18 +1,22 @@
 import { ButtonHTMLAttributes } from "react";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement>{
-    Label: string;
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+  label: string;
 }
 
 
-const Button = () => {
+const Button = ({ label, ...props }) => {
     
   return (
-    <button></button>
+    <button {...props}>{label}</button>
   );
 }
+
+export default Button;
 
 // Progress:
 // 1. cr8 Button component
 // 2. Add interface Props with Label props with type string
 // 3. add extends ButtonHTMLAttributes<HTMLButtonElement> to Props type
+// 4. Add label with type Props to Button component and spread it to button element
+// 5. Render label props/parameter to button element 
