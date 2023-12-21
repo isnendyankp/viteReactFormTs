@@ -1,6 +1,6 @@
 
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLParagraphElement> {
     children: string;
 }
 
@@ -20,3 +20,4 @@ export default Text;
 // 2. Cr8 type Props with children props with type string
 // 3. Add children props/parameter with type Props to Text component
 // 4. Render children props/parameter to p element
+// 5. Add extends HTMLAttributes<HTMLParagraphElement> to Props type
