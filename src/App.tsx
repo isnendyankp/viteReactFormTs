@@ -11,7 +11,7 @@ function App() {
       <input type="text" onChange={() => console.log('asd')} />
       <input type="text" onChange={() => console.log('asd')} />
       <input type="text" onChange={() => console.log('asd')} />
-      <button onClick={() => console.log('clicked')}>Submit</button>
+      <button type='submit'>Submit</button>
     </>
   );
 }
