@@ -1,6 +1,10 @@
 # About Project
 
-This project learn create simple form with vitereact form by using tailwindcss & formik  
+This project learn create simple multiple step form with vitereact form typescript and this project also using tailwindcss, formik & yup validation.
+
+## link project
+
+https://9dymultistepform.netlify.app/
 
 ## Create Project
 
@@ -75,8 +79,27 @@ npm install formik --save
 
 npm i yup
 
-##  component folder
+##  Structure src folder
 
-1. create new components folder in src folder
-2. create new input folder in components folder
-3. create new index.tsx file in input folder
+Map folder structure:
+
+    - assets
+        - images
+            - logo.png
+    - components
+        - Button Folder
+            - Button.tsx
+        - Card Folder
+            - Card.tsx
+        - Input Folder
+            - Input.tsx
+        - Text Folder
+            - Text.tsx
+        - index.tsx for export all component distributor
+    - containers
+        - HomeContainer folder
+            - HomeContainer.tsx
+        - index.tsx for export all container distributor
+    - App.css
+    - App.tsx
+    - vite-env.d.ts
