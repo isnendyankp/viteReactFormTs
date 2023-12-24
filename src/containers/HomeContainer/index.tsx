@@ -24,9 +24,15 @@ const HomeContainer = () => {
   };
 
   interface FormProps {
-    nama: string;
-    umur: string;
-    hobi: string;
+    fullname: string;
+    email: string;
+    date: string;
+    alamat: string;
+    kota: string;
+    negara: string;
+    kodepos: string;
+    username: string;
+    password: string;
   }
 
   const formMik = useFormik({
@@ -123,3 +129,7 @@ export default HomeContainer
 // 29. cr8 interface FormProps with nama, umur, hobi props with type string
 // 30. add FormProps type to onSubmit props with type FormProps
 // 31. cr8 useState for step with value 1
+// 32. cr8 3 step for form
+// 33. cr8 function handleNext
+// 34. cr8 function handlePrevious
+// 35. edit interface FormProps with fullname, email, date, alamat, kota, negara, kodepos, username, password props with type string
