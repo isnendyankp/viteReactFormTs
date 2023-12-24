@@ -6,6 +6,15 @@ const HomeContainer = () => {
   // cr8 useState for step
   const [step, setStep] = useState<number>(1);
 
+  //  cr8 3 step for form
+  // cr8 function handleNext
+  const handleNext = () => {
+    if (step === 3) {
+      return;
+    }
+    setStep((prevState) => prevState + 1);
+  };
+
   interface FormProps {
     nama: string;
     umur: string;
