@@ -37,9 +37,15 @@ const HomeContainer = () => {
 
   const formMik = useFormik({
     initialValues: {
-      nama: '',
-      umur: '',
-      hobi: '',
+      fullname: '',
+      email: '',
+      date: '',
+      alamat: '',
+      kota: '',
+      negara: '',
+      kodepos: '',
+      username: '',
+      password: '',
     },
     onSubmit: (values: FormProps) => console.log(values),
     validationSchema: yup.object({
@@ -133,3 +139,4 @@ export default HomeContainer
 // 33. cr8 function handleNext
 // 34. cr8 function handlePrevious
 // 35. edit interface FormProps with fullname, email, date, alamat, kota, negara, kodepos, username, password props with type string
+// 36. add new initial values to forMik with fullname, email, date, alamat, kota, negara, kodepos, username, password & empty string value
