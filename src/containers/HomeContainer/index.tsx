@@ -3,75 +3,73 @@ import { useFormik } from "formik";
 import * as yup from 'yup';
 
 const HomeContainer = () => {
+  // cr8 useState for step
+  const [step, setStep] = useState<number>(1);
 
-    interface FormProps {
-        nama: string;
-        umur: string;
-        hobi: string;
-    }
+  interface FormProps {
+    nama: string;
+    umur: string;
+    hobi: string;
+  }
 
-    const formMik = useFormik({
-      initialValues: {
-        nama: '',
-        umur: '',
-        hobi: '',
-      },
-      onSubmit: (values: FormProps) => console.log(values),
-      validationSchema: yup.object({
-        nama: yup.string().required('Nama tidak boleh kosong'),
-        umur: yup.string().required('Umur jangan lupa diisi ya'),
-        hobi: yup.string().required('Hobi nya apa nih?')
-      }),
-    });
+  const formMik = useFormik({
+    initialValues: {
+      nama: '',
+      umur: '',
+      hobi: '',
+    },
+    onSubmit: (values: FormProps) => console.log(values),
+    validationSchema: yup.object({
+      nama: yup.string().required('Nama tidak boleh kosong'),
+      umur: yup.string().required('Umur jangan lupa diisi ya'),
+      hobi: yup.string().required('Hobi nya apa nih?'),
+    }),
+  });
 
-        return (
-          <>
-            <form onSubmit={formMik.handleSubmit}>
-              {/* Input Nama */}
-              <div>
-                <Text>{'Nama'}</Text>
-                <Input
-                  className="block border-neutral-400 border"
-                  name={'nama'}
-                  value={formMik.values.nama}
-                  onChange={formMik.handleChange('nama')}
-                />
-                {/* add error validation text with yup for input nama */}
-                {formMik.errors.nama && <Text>{formMik.errors.nama}</Text>}
-              </div>
-              {/* Input Umur */}
-              <div>
-                <Text>{'Umur'}</Text>
-                <Input
-                  className="block border-neutral-400 border"
-                  name={'umur'}
-                  value={formMik.values.umur}
-                  onChange={formMik.handleChange('umur')}
-                />
-                {/* add error validation text with yup for input umur */}
-                {formMik.errors.umur && <Text>{formMik.errors.umur}</Text>}
-              </div>
-              {/* Input Hobi */}
-              <div>
-                <Text>{'Hobi'}</Text>
-                <Input
-                  className="block border-neutral-400 border"
-                  name={'hobi'}
-                  value={formMik.values.hobi}
-                  onChange={formMik.handleChange('hobi')}
-                />
-                {/* add error validation text with yup for input hobi */}
-                {formMik.errors.hobi && <Text>{formMik.errors.hobi}</Text>}
-              </div>
-              {/* Button Submit */}
-              <Button
-                label={'Submit'}
-                type={'submit'}
-                className={'bg-green-500'}
-              />
-            </form>
-          </>
-        );
+  return (
+    <>
+      <form onSubmit={formMik.handleSubmit}>
+        {/* Input Nama */}
+        <div>
+          <Text>{'Nama'}</Text>
+          <Input
+            className="block border-neutral-400 border"
+            name={'nama'}
+            value={formMik.values.nama}
+            onChange={formMik.handleChange('nama')}
+          />
+          {/* add error validation text with yup for input nama */}
+          {formMik.errors.nama && <Text>{formMik.errors.nama}</Text>}
+        </div>
+        {/* Input Umur */}
+        <div>
+          <Text>{'Umur'}</Text>
+          <Input
+            className="block border-neutral-400 border"
+            name={'umur'}
+            value={formMik.values.umur}
+            onChange={formMik.handleChange('umur')}
+          />
+          {/* add error validation text with yup for input umur */}
+          {formMik.errors.umur && <Text>{formMik.errors.umur}</Text>}
+        </div>
+        {/* Input Hobi */}
+        <div>
+          <Text>{'Hobi'}</Text>
+          <Input
+            className="block border-neutral-400 border"
+            name={'hobi'}
+            value={formMik.values.hobi}
+            onChange={formMik.handleChange('hobi')}
+          />
+          {/* add error validation text with yup for input hobi */}
+          {formMik.errors.hobi && <Text>{formMik.errors.hobi}</Text>}
+        </div>
+        {/* Button Submit */}
+        <Button label={'Submit'} type={'submit'} className={'bg-green-500'} />
+      </form>
+    </>
+  );
 }
 
 export default HomeContainer
@@ -107,3 +105,4 @@ export default HomeContainer
 // 28. add validationSchema for umur & hobi including error validation text
 // 29. cr8 interface FormProps with nama, umur, hobi props with type string
 // 30. add FormProps type to onSubmit props with type FormProps
+// 31. cr8 useState for step with value 1
