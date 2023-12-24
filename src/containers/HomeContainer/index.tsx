@@ -15,6 +15,14 @@ const HomeContainer = () => {
     setStep((prevState) => prevState + 1);
   };
 
+  // cr8 function handlePrevious
+  const handlePrevious = () => {
+    if (step === 1) {
+      return;
+    }
+    setStep((prevState) => prevState - 1);
+  };
+
   interface FormProps {
     nama: string;
     umur: string;
