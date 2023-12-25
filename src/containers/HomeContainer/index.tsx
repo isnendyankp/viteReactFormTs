@@ -1,4 +1,4 @@
-import { Input, Text, Button } from "../../components"
+import { Input, Text, Button, Card } from "../../components"
 import { useFormik } from "formik";
 import * as yup from 'yup';
 
@@ -73,46 +73,66 @@ const HomeContainer = () => {
   return (
     <Card border={false} className=" ">
       <Card border>
-        <form onSubmit={formMik.handleSubmit}>
-          {/* Input Nama */}
-          <div>
-            <Text>{'Nama'}</Text>
-            <Input
-              className="block border-neutral-400 border"
-              name={'nama'}
-              value={formMik.values.nama}
-              onChange={formMik.handleChange('nama')}
+        
+        {/* Step 1: Personal information = FullName, Email Address, Date of birth */}
+
+        {step === 1 && (
+          <form onSubmit={formMik.handleSubmit}>
+            <p>Personal Information</p>
+            {/* Input FullName */}
+            <div className="m-1">
+              <Text>{'FullName'}</Text>
+              <Input
+                className="block border-emerald-700 border"
+                name={'nama'}
+                value={formMik.values.fullname}
+                onChange={formMik.handleChange('fullname')}
+              />
+              {/* add error validation text with yup for input nama */}
+              {formMik.errors.fullname && (
+                <Text>{formMik.errors.fullname}</Text>
+              )}
+            </div>
+            {/* Input Email address */}
+            <div className="m-1">
+              <Text>{'Email Address'}</Text>
+              <Input
+                className="block border-emerald-700 border"
+                name={'email'}
+                value={formMik.values.email}
+                onChange={formMik.handleChange('email')}
+              />
+              {/* add error validation text with yup for input umur */}
+              {formMik.errors.email && <Text>{formMik.errors.email}</Text>}
+            </div>
+            {/* Input Date of birth */}
+            <div className="m-1">
+              <Text>{'Date of birth'}</Text>
+              <Input
+                className="block border-emerald-700 border"
+                name={'date'}
+                value={formMik.values.date}
+                onChange={formMik.handleChange('date')}
+              />
+              {/* add error validation text with yup for input hobi */}
+              {formMik.errors.date && <Text>{formMik.errors.date}</Text>}
+            </div>
+            {/* Button previous */}
+            <Button
+              label={'Previous'}
+              onClick={handlePrevious}
+              type={'button'}
+              className={'bg-green-500'}
             />
-            {/* add error validation text with yup for input nama */}
-            {formMik.errors.nama && <Text>{formMik.errors.nama}</Text>}
-          </div>
-          {/* Input Umur */}
-          <div>
-            <Text>{'Umur'}</Text>
-            <Input
-              className="block border-neutral-400 border"
-              name={'umur'}
-              value={formMik.values.umur}
-              onChange={formMik.handleChange('umur')}
+            {/* Button Next */}
+            <Button
+              label={'Next'}
+              onClick={handleNext}
+              type={'button'}
+              className={'bg-green-500'}
             />
-            {/* add error validation text with yup for input umur */}
-            {formMik.errors.umur && <Text>{formMik.errors.umur}</Text>}
-          </div>
-          {/* Input Hobi */}
-          <div>
-            <Text>{'Hobi'}</Text>
-            <Input
-              className="block border-neutral-400 border"
-              name={'hobi'}
-              value={formMik.values.hobi}
-              onChange={formMik.handleChange('hobi')}
-            />
-            {/* add error validation text with yup for input hobi */}
-            {formMik.errors.hobi && <Text>{formMik.errors.hobi}</Text>}
-          </div>
-          {/* Button Submit */}
-          <Button label={'Submit'} type={'submit'} className={'bg-green-500'} />
-        </form>
+          </form>
+        )}
       </Card>
     </Card>
   );
@@ -161,3 +181,7 @@ export default HomeContainer
 // 38. Add validationSchema for step 2 with alamat, kota, negara, kodepos include text error validation.
 // 39. Add validationSchema for step 3 with username, password include text error validation.
 // 40. wrap form with Card component from @components
+// 41. import Card component
+// 42. render Card component with border props
+// 43. add border props to Main Card component with value false & className props with value empty string
+// 44. Add logic for step 1 to form element with add condition if step === 1
