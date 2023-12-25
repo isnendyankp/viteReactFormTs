@@ -61,6 +61,12 @@ const HomeContainer = () => {
       kota: yup.string().required('Kota tidak boleh kosong'),
       negara: yup.string().required('Negara tidak boleh kosong'),
       kodepos: yup.string().required('Kodepos tidak boleh kosong'),
+      // step 3 validation
+      username: yup.string().required('Username tidak boleh kosong'),
+      password: yup
+        .string()
+        .min(8, 'Password minimal 8 karakter')
+        .required('Password tidak boleh kosong'),
     }),
   });
 
@@ -151,3 +157,4 @@ export default HomeContainer
 // 36. add new initial values to forMik with fullname, email, date, alamat, kota, negara, kodepos, username, password & empty string value
 //  37. Add validationSchema for step 1 with fullname, email & date include text error validation.
 // 38. Add validationSchema for step 2 with alamat, kota, negara, kodepos include text error validation.
+// 39. Add validationSchema for step 3 with username, password include text error validation.
