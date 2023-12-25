@@ -49,12 +49,18 @@ const HomeContainer = () => {
     },
     onSubmit: (values: FormProps) => console.log(values),
     validationSchema: yup.object({
+      // step 1 validation
       fullname: yup.string().required('Nama tidak boleh kosong'),
       email: yup
         .string()
         .email('Email tidak valid')
         .required('Email tidak boleh kosong'),
       date: yup.string().required('Tanggal lahir tidak boleh kosong'),
+      // step 2 validation
+      alamat: yup.string().required('Alamat tidak boleh kosong'),
+      kota: yup.string().required('Kota tidak boleh kosong'),
+      negara: yup.string().required('Negara tidak boleh kosong'),
+      kodepos: yup.string().required('Kodepos tidak boleh kosong'),
     }),
   });
 
@@ -143,4 +149,5 @@ export default HomeContainer
 // 34. cr8 function handlePrevious
 // 35. edit interface FormProps with fullname, email, date, alamat, kota, negara, kodepos, username, password props with type string
 // 36. add new initial values to forMik with fullname, email, date, alamat, kota, negara, kodepos, username, password & empty string value
-//  37. Add validationSchema for step 1 with fullname, email & date include text error validation
+//  37. Add validationSchema for step 1 with fullname, email & date include text error validation.
+// 38. Add validationSchema for step 2 with alamat, kota, negara, kodepos include text error validation.
