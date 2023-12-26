@@ -73,7 +73,6 @@ const HomeContainer = () => {
   return (
     <Card border={false} className=" ">
       <Card border>
-        
         {/* Step 1: Personal information = FullName, Email Address, Date of birth */}
 
         {step === 1 && (
@@ -133,6 +132,15 @@ const HomeContainer = () => {
             />
           </form>
         )}
+
+        {/* Step 2 for Address information = Street Address, City, State, Zip Code */}
+
+        {step === 2 && (
+          <form >
+            <p>Address Information</p>
+            
+          </form>
+        )}
       </Card>
     </Card>
   );
@@ -185,3 +193,4 @@ export default HomeContainer
 // 42. render Card component with border props
 // 43. add border props to Main Card component with value false & className props with value empty string
 // 44. Add logic for step 1 to form element with add condition if step === 1
+// 45. Add logic for step 2 to form element with add condition if step === 2 & add new form element
