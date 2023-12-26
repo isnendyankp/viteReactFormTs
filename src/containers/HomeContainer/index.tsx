@@ -160,7 +160,8 @@ const HomeContainer = () => {
                 value={formMik.values.kota}
                 onChange={formMik.handleChange('kota')}
               />
-              
+              {/* add error validation text with yup for input kota */}
+              {formMik.errors.kota && <Text>{formMik.errors.kota}</Text>} 
             </div>
           </form>
         )}
@@ -221,3 +222,4 @@ export default HomeContainer
 // 47. add text & input for input street address
 // 48. add error validation text with yup for input alamat
 // 49. add text & input for input city
+// 50. add error validation text with yup for input kota
