@@ -147,6 +147,8 @@ const HomeContainer = () => {
                 value={formMik.values.alamat}
                 onChange={formMik.handleChange('alamat')}
               />
+              {/* add error validation text with yup for input alamat */}
+              {formMik.errors.alamat && <Text>{formMik.errors.alamat}</Text>}
             </div>
           </form>
         )}
@@ -205,3 +207,4 @@ export default HomeContainer
 // 45. Add logic for step 2 to form element with add condition if step === 2 & add new form element
 // 46. pass in onSubmit props to form element with value formMik.handleSubmit
 // 47. add text & input for input street address
+// 48. add error validation text with yup for input alamat
