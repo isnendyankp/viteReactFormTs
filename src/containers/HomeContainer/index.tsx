@@ -138,6 +138,16 @@ const HomeContainer = () => {
         {step === 2 && (
           <form onSubmit={formMik.handleSubmit}>
             <p>Address Information</p>
+            {/* Input Street Address */}
+            <div className="m-1">
+              <Text>{'Street Address'}</Text>
+              <Input
+                className="block border-emerald-700 border"
+                name={'alamat'}
+                value={formMik.values.alamat}
+                onChange={formMik.handleChange('alamat')}
+              />
+            </div>
           </form>
         )}
       </Card>
@@ -194,3 +204,4 @@ export default HomeContainer
 // 44. Add logic for step 1 to form element with add condition if step === 1
 // 45. Add logic for step 2 to form element with add condition if step === 2 & add new form element
 // 46. pass in onSubmit props to form element with value formMik.handleSubmit
+// 47. add text & input for input street address
