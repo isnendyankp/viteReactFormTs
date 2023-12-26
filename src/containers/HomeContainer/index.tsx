@@ -161,7 +161,19 @@ const HomeContainer = () => {
                 onChange={formMik.handleChange('kota')}
               />
               {/* add error validation text with yup for input kota */}
-              {formMik.errors.kota && <Text>{formMik.errors.kota}</Text>} 
+              {formMik.errors.kota && <Text>{formMik.errors.kota}</Text>}
+            </div>
+
+            {/* Input Zip Code */}
+            <div className="m-1">
+              <Text>{'Zip Code'}</Text>
+              <Input
+                className="block border-emerald-700 border"
+                name={'kodepos'}
+                value={formMik.values.kodepos}
+                onChange={formMik.handleChange('kodepos')}
+              />
+              
             </div>
           </form>
         )}
@@ -223,3 +235,4 @@ export default HomeContainer
 // 48. add error validation text with yup for input alamat
 // 49. add text & input for input city
 // 50. add error validation text with yup for input kota
+// 51. add text & input for input zip code
