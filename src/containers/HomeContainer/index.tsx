@@ -136,9 +136,8 @@ const HomeContainer = () => {
         {/* Step 2 for Address information = Street Address, City, State, Zip Code */}
 
         {step === 2 && (
-          <form >
+          <form onSubmit={formMik.handleSubmit}>
             <p>Address Information</p>
-            
           </form>
         )}
       </Card>
@@ -194,3 +193,4 @@ export default HomeContainer
 // 43. add border props to Main Card component with value false & className props with value empty string
 // 44. Add logic for step 1 to form element with add condition if step === 1
 // 45. Add logic for step 2 to form element with add condition if step === 2 & add new form element
+// 46. pass in onSubmit props to form element with value formMik.handleSubmit
