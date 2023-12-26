@@ -150,6 +150,18 @@ const HomeContainer = () => {
               {/* add error validation text with yup for input alamat */}
               {formMik.errors.alamat && <Text>{formMik.errors.alamat}</Text>}
             </div>
+
+            {/* Input City */}
+            <div className="m-1">
+              <Text>{'City'}</Text>
+              <Input
+                className="block border-emerald-700 border"
+                name={'kota'}
+                value={formMik.values.kota}
+                onChange={formMik.handleChange('kota')}
+              />
+              
+            </div>
           </form>
         )}
       </Card>
@@ -208,3 +220,4 @@ export default HomeContainer
 // 46. pass in onSubmit props to form element with value formMik.handleSubmit
 // 47. add text & input for input street address
 // 48. add error validation text with yup for input alamat
+// 49. add text & input for input city
