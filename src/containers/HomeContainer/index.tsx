@@ -176,6 +176,14 @@ const HomeContainer = () => {
               {/* add error validation text with yup for input kodepos */}
               {formMik.errors.kodepos && <Text>{formMik.errors.kodepos}</Text>}
             </div>
+
+            {/* Button previous */}
+            <Button
+              label={'Previous'}
+              onClick={handlePrevious}
+              type={'button'}
+              className={'bg-green-500'}
+            />
           </form>
         )}
       </Card>
@@ -238,4 +246,5 @@ export default HomeContainer
 // 50. add error validation text with yup for input kota
 // 51. add text & input for input zip code
 // 52. add error validation text with yup for input kodepos
+// 53. add Button previous @step 2 with add condition if step === 2
 
