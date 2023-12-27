@@ -196,7 +196,10 @@ const HomeContainer = () => {
 
         {/* Step 3 for Account information = Username, Password */}
         {step === 3 && (
+          // form element 
+          <form onSubmit={formMik.handleSubmit}>
 
+          </form>
         )}
       </Card>
     </Card>
@@ -261,4 +264,5 @@ export default HomeContainer
 // 53. add Button previous @step 2 with add condition with handlePrevious function
 // 54. add Button next @step 2 with add condition with handleNext function
 // 55. Add  base logic for step 3
+// 56. add form element for step 3 include onSubmit props
 
