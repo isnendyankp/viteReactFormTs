@@ -200,7 +200,7 @@ const HomeContainer = () => {
           <form onSubmit={formMik.handleSubmit}>
             {/* Input Username */}
             <div className="m-1">
-              
+              <Text>{'Username'}</Text>
             </div>
           </form>
         )}
@@ -269,4 +269,4 @@ export default HomeContainer
 // 55. Add  base logic for step 3
 // 56. add form element for step 3 include onSubmit props
 // 57. add div for input username
-
+// 58. add text with value Username
