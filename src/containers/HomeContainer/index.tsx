@@ -204,7 +204,8 @@ const HomeContainer = () => {
               <Input
                 className="block border-emerald-700 border"
                 name={'username'}
-                value={formMik.values.username}          
+                value={formMik.values.username}
+                onChange={formMik.handleChange('username')}          
               />
             </div>
           </form>
@@ -278,3 +279,4 @@ export default HomeContainer
 // 59. add input with name props with value username
 // 60. add style with tailwind className props with value block border-emerald-700 border
 // 61. add value props to input with value formMik.values.username
+// 62. add onChange props to input with value formMik.handleChange('username')
