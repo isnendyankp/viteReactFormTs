@@ -201,6 +201,9 @@ const HomeContainer = () => {
             {/* Input Username */}
             <div className="m-1">
               <Text>{'Username'}</Text>
+              <Input
+                name={'username'}          
+              />
             </div>
           </form>
         )}
@@ -270,3 +273,4 @@ export default HomeContainer
 // 56. add form element for step 3 include onSubmit props
 // 57. add div for input username
 // 58. add text with value Username
+// 59. add input with name props with value username
