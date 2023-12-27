@@ -193,6 +193,11 @@ const HomeContainer = () => {
             />
           </form>
         )}
+
+        {/* Step 3 for Account information = Username, Password */}
+        {step === 3 && (
+
+        )}
       </Card>
     </Card>
   );
@@ -255,4 +260,5 @@ export default HomeContainer
 // 52. add error validation text with yup for input kodepos
 // 53. add Button previous @step 2 with add condition with handlePrevious function
 // 54. add Button next @step 2 with add condition with handleNext function
+// 55. Add  base logic for step 3
 
