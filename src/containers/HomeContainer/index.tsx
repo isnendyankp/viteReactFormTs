@@ -202,6 +202,7 @@ const HomeContainer = () => {
             <div className="m-1">
               <Text>{'Username'}</Text>
               <Input
+                className="block border-emerald-700 border"
                 name={'username'}          
               />
             </div>
@@ -274,3 +275,4 @@ export default HomeContainer
 // 57. add div for input username
 // 58. add text with value Username
 // 59. add input with name props with value username
+// 60. add style with tailwind className props with value block border-emerald-700 border
