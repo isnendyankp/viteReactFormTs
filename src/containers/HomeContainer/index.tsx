@@ -205,8 +205,12 @@ const HomeContainer = () => {
                 className="block border-emerald-700 border"
                 name={'username'}
                 value={formMik.values.username}
-                onChange={formMik.handleChange('username')}          
+                onChange={formMik.handleChange('username')}
               />
+              {/* add error validation text with yup for input nama */}
+              {formMik.errors.username && (
+                <Text>{formMik.errors.username}</Text>
+              )}
             </div>
           </form>
         )}
@@ -280,3 +284,4 @@ export default HomeContainer
 // 60. add style with tailwind className props with value block border-emerald-700 border
 // 61. add value props to input with value formMik.values.username
 // 62. add onChange props to input with value formMik.handleChange('username')
+// 63. add error validation text with yup for input nama
