@@ -218,7 +218,7 @@ const HomeContainer = () => {
                 <Text>{'Password'}</Text>
                 <Input
                   className="block border-emerald-700 border"
-                  
+                  name={'password'}  
                 />
               </div>
           </form>
@@ -296,3 +296,4 @@ export default HomeContainer
 // 63. add error validation text with yup for input nama
 // 64. add div for base input password
 // 65. add input & styling tailwind className props with value block border-emerald-700 border
+// 66. add name props to input with value password because we need to add validationSchema for password
