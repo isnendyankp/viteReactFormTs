@@ -219,7 +219,8 @@ const HomeContainer = () => {
                 <Input
                   className="block border-emerald-700 border"
                   name={'password'}
-                  value={formMik.values.password}  
+                  value={formMik.values.password}
+                  onChange={formMik.handleChange('password')}  
                 />
               </div>
           </form>
@@ -298,4 +299,5 @@ export default HomeContainer
 // 64. add div for base input password
 // 65. add input & styling tailwind className props with value block border-emerald-700 border
 // 66. add name props to input with value password because we need to add validationSchema for password
-// 67. add value props to input with value formMik.values.password 
+// 67. add value props to input with value formMik.values.password
+// 68. add onChange props to input with value formMik.handleChange('password') 
