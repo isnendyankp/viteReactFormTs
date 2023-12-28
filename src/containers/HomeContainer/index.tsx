@@ -199,20 +199,25 @@ const HomeContainer = () => {
         {step === 3 && (
           // form element
           <form onSubmit={formMik.handleSubmit}>
-            {/* Input Username */}
-            <div className="m-1">
-              <Text>{'Username'}</Text>
-              <Input
-                className="block border-emerald-700 border"
-                name={'username'}
-                value={formMik.values.username}
-                onChange={formMik.handleChange('username')}
-              />
-              {/* add error validation text with yup for input nama */}
-              {formMik.errors.username && (
-                <Text>{formMik.errors.username}</Text>
-              )}
-            </div>
+              {/* Input Username */}
+              <div className="m-1">
+                <Text>{'Username'}</Text>
+                <Input
+                  className="block border-emerald-700 border"
+                  name={'username'}
+                  value={formMik.values.username}
+                  onChange={formMik.handleChange('username')}
+                />
+                {/* add error validation text with yup for input nama */}
+                {formMik.errors.username && (
+                  <Text>{formMik.errors.username}</Text>
+                )}
+              </div>
+              {/* Input Password */}
+              <div className="m-1">
+                <Text>{'Password'}</Text>
+                
+              </div>
           </form>
         )}
       </Card>
@@ -286,3 +291,4 @@ export default HomeContainer
 // 61. add value props to input with value formMik.values.username
 // 62. add onChange props to input with value formMik.handleChange('username')
 // 63. add error validation text with yup for input nama
+// 64. add div for base input password
