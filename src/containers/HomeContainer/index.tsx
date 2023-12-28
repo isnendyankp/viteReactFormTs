@@ -216,7 +216,10 @@ const HomeContainer = () => {
               {/* Input Password */}
               <div className="m-1">
                 <Text>{'Password'}</Text>
-                
+                <Input
+                  className="block border-emerald-700 border"
+                  
+                />
               </div>
           </form>
         )}
@@ -292,3 +295,4 @@ export default HomeContainer
 // 62. add onChange props to input with value formMik.handleChange('username')
 // 63. add error validation text with yup for input nama
 // 64. add div for base input password
+// 65. add input & styling tailwind className props with value block border-emerald-700 border
