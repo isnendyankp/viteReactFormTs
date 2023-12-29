@@ -208,7 +208,7 @@ const HomeContainer = () => {
                   value={formMik.values.username}
                   onChange={formMik.handleChange('username')}
                 />
-                {/* add error validation text with yup for input nama */}
+                {/* add error validation text with yup for input username */}
                 {formMik.errors.username && (
                   <Text>{formMik.errors.username}</Text>
                 )}
@@ -227,6 +227,13 @@ const HomeContainer = () => {
                   <Text>{formMik.errors.password}</Text>
                 )}
               </div>
+              {/* Button previous */}
+              <Button
+                label={'Previous'}
+                onClick={handlePrevious}
+                type={'button'}
+                className={'bg-green-500'}
+              />
           </form>
         )}
       </Card>
@@ -305,4 +312,5 @@ export default HomeContainer
 // 66. add name props to input with value password because we need to add validationSchema for password
 // 67. add value props to input with value formMik.values.password
 // 68. add onChange props to input with value formMik.handleChange('password')
-// 69. add error validation text with yup for input password 
+// 69. add error validation text with yup for input password
+// 70. add Button previous @step 3 with add condition with handlePrevious function 
