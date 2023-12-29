@@ -234,6 +234,12 @@ const HomeContainer = () => {
                 type={'button'}
                 className={'bg-green-500'}
               />
+              {/* Button Submit */}
+              <Button
+                label={'Submit'}
+                type={'submit'}
+                className={'bg-green-500'}
+              />
           </form>
         )}
       </Card>
@@ -313,4 +319,5 @@ export default HomeContainer
 // 67. add value props to input with value formMik.values.password
 // 68. add onChange props to input with value formMik.handleChange('password')
 // 69. add error validation text with yup for input password
-// 70. add Button previous @step 3 with add condition with handlePrevious function 
+// 70. add Button previous @step 3 with add condition with handlePrevious function
+// 71. add Button submit @step 3 with add condition with handleNext function 
