@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* styling .app for form into center like a normal form */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
